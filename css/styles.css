@@ -1,62 +1,77 @@
-/* CALCULATOR */
+/* E-COMMERCE */
 
-body{
+#body {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#cart {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 300px;
+    border-radius: 5px;
+}
+
+#products {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgb(193, 218, 243);
+    gap: 1rem;
+    padding: 1rem;
 }
 
-#calculator{
-    font-family: Arial, sans-serif;
-    background-color: rgb(50, 53, 56);
-    border-radius: 15px;
-    max-width: 500px;
-    overflow: hidden;
+.product {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
 }
 
-#display{
-    width: 100%;
-    padding: 20px;
-    font-size: 5rem;
-    text-align: left;
+.addToCart, .removeFromCart {
+    background-color: #333;
+    color: #fff;
     border: none;
-    background-color: rgb(125, 130, 135);
-    color: white;
-}
-
-#keys{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 25px;
-}
-
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    border: none;
-    background-color: slategrey;
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
+    padding: 0.5rem 1rem;
     cursor: pointer;
+    border-radius: 5px;
+    margin-top: 0.5rem;
 }
-button:hover{
-    background-color: rgb(147, 166, 186);
+
+.addToCart:hover, .removeFromCart:hover {
+    background-color: #555;
 }
-button:active{
-    background-color: rgb(182, 205, 230);
+
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-weight: bolder;
 }
-.operatorBtn{
-    background-color: rgb(75, 216, 216);
+
+h2{
+    color: black;
 }
-.operatorBtn:hover{
-    background-color: rgb(83, 238, 238);
+
+p{
+    color: black;
+    font-weight: bold;
 }
-.operatorBtn:active{
-    background-color: rgb(88, 255, 255);
+
+img{
+    width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
 }
