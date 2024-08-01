@@ -3,40 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce</title>
+    <title> E-commerce </title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    
     <header>
-        <h1>Mi Tienda</h1>
+        <h1> Mi Tienda </h1>
         <div id="cart">
-            <h2>Carrito de Compras</h2>
+            <h2> Carrito de Compras </h2>
             <ul id="cartItems"></ul>
-            <p>Total: $<span id="total">0.00</span></p>
+            <p> Total: $<span id="total"> 0.00 </span></p>
         </div>
     </header>
+
     <main>
-        <section id="products">
-            <div class="product" data-price="80.00">
-                <img src="./img/banana.jpg" alt="Banana">
-                <h3>Banana</h3>
-                <p>Precio: $10.00</p>
-                <button class="addToCart">Agregar al Carrito</button>
-            </div>
-            <div class="product" data-price="65.00">
-                <img src="./img/apple.jpg" alt="Manzana">
-                <h3>Manzana</h3>
-                <p>Precio: $20.00</p>
-                <button class="addToCart">Agregar al Carrito</button>
-            </div>
-            <div class="product" data-price="70.00">
-                <img src="./img/orange.jpg" alt="Naranja">
-                <h3>Naranja</h3>
-                <p>Precio: $30.00</p>
-                <button class="addToCart">Agregar al Carrito</button>
-            </div>
-        </section>
+        <input type="text" id="search" placeholder="Buscar producto...">
+        <section id="products"></section>
     </main>
+
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 /* E-COMMERCE */
 
-#body {
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -26,6 +26,7 @@ header {
 
 #products {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     padding: 1rem;
@@ -36,6 +37,7 @@ header {
     padding: 1rem;
     border-radius: 5px;
     text-align: center;
+    width: 200px;
 }
 
 .addToCart, .removeFromCart {
@@ -70,7 +72,7 @@ p{
 }
 
 img{
-    width: 250px;
+    width: 100%;
     height: auto;
     margin-bottom: 1rem;
     border-radius: 5px;
