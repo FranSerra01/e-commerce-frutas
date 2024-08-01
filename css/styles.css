@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #ff6f61;
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -62,7 +62,11 @@ header {
     font-weight: bolder;
 }
 
-h2{
+h1{
+    font-size: 70px;
+}
+
+h4{
     color: black;
 }
 
@@ -76,4 +80,30 @@ img{
     height: auto;
     margin-bottom: 1rem;
     border-radius: 5px;
+}
+
+#searchContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#search {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ff6f61;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#search:focus {
+    border-color: #e64a19;
+    box-shadow: 0 0 10px rgba(230, 74, 25, 0.3);
+}
+
+#search::placeholder {
+    color: #999;
 }
