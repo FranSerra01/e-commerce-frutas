@@ -18,13 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 9, name: 'Pera', price: 3.00, img: './img/pear.jpg' },
     ];
 
+    const loadCartFromStorage = () => {
+        const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+        storedCart.forEach(product => addToCart(product));
+    };
+
+    const saveCartToStorage = (cart) => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    };
+
     const displayProducts = (productList) => {
         const productsContainer = document.getElementById('products');
         productsContainer.innerHTML = '';
         productList.forEach(product => {
             const productDiv = document.createElement('div');
             productDiv.classList.add('product');
-            productDiv.setAttribute('dataPrice', product.price);
+            productDiv.setAttribute('data-price', product.price);
             productDiv.innerHTML = `
                 <img src="${product.img}" alt="${product.name}">
                 <h3>${product.name}</h3>
@@ -48,15 +57,23 @@ document.addEventListener('DOMContentLoaded', () => {
         totalValue += product.price;
         total.textContent = totalValue.toFixed(2);
 
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(product);
+        saveCartToStorage(cart);
+
         cartItem.querySelector('.removeFromCart').addEventListener('click', () => {
-            removeFromCart(cartItem, product.price);
+            removeFromCart(cartItem, product.price, product);
         });
     };
 
-    const removeFromCart = (cartItem, price) => {
+    const removeFromCart = (cartItem, price, product) => {
         cartItems.removeChild(cartItem);
         totalValue -= price;
         total.textContent = totalValue.toFixed(2);
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart = cart.filter(item => item.id !== product.id);
+        saveCartToStorage(cart);
     };
 
     const filterProducts = () => {
@@ -70,4 +87,5 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', filterProducts);
 
     displayProducts(products);
+    loadCartFromStorage();
 });
