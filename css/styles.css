@@ -1,5 +1,3 @@
-/* E-COMMERCE */
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -40,7 +38,7 @@ header {
     width: 200px;
 }
 
-.addToCart, .removeFromCart {
+.addToCart, .removeFromCart, .emptyCart {
     background-color: #333;
     color: #fff;
     border: none;
@@ -50,7 +48,7 @@ header {
     margin-top: 0.5rem;
 }
 
-.addToCart:hover, .removeFromCart:hover {
+.addToCart:hover, .removeFromCart:hover, .emptyCart:hover {
     background-color: #555;
 }
 
@@ -107,3 +105,15 @@ img{
 #search::placeholder {
     color: #999;
 }
+
+.loading {
+    display: none;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ff6f61;
+}
+
+.show {
+    display: block;
+}
+

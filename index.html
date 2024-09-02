@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> E-commerce </title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     
@@ -15,6 +16,7 @@
             <h4> Carrito de Compras </h4>
             <ul id="cartItems"></ul>
             <p> Total: $<span id="total"> 0.00 </span></p>
+            <button id="emptyCart" class="emptyCart">Vaciar Carrito</button>
         </div>
     </header>
 
@@ -24,6 +26,8 @@
         </div>
 
         <section id="products"></section>
+
+        <div id="loading" class="loading">Cargando productos...</div>
     </main>
 
     <script src="js/main.js"></script>

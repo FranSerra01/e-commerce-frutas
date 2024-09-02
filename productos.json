@@ -1,0 +1,11 @@
+[
+    { "id": 1, "name": "Banana", "price": 10.00, "img": "./img/banana.jpg" },
+    { "id": 2, "name": "Manzana", "price": 15.00, "img": "./img/apple.jpg" },
+    { "id": 3, "name": "Naranja", "price": 25.00, "img": "./img/orange.jpg" },
+    { "id": 4, "name": "Kiwi", "price": 25.00, "img": "./img/kiwi.jpg" },
+    { "id": 5, "name": "Anana", "price": 50.00, "img": "./img/pineapple.jpg" },
+    { "id": 6, "name": "Mango", "price": 40.00, "img": "./img/mango.jpg" },
+    { "id": 7, "name": "Pomelo", "price": 30.00, "img": "./img/grapefruit.jpg" },
+    { "id": 8, "name": "Frutilla", "price": 3.00, "img": "./img/strawberry.jpg" },
+    { "id": 9, "name": "Pera", "price": 3.00, "img": "./img/pear.jpg" }
+]
